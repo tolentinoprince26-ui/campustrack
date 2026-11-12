@@ -1,0 +1,96 @@
+# Local credentials
+/config.php
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# CAMPUS TRACK - GIT IGNORE
+# ==========================================
+
+# Private database configuration
+config.php
+config.local.php
+.env
+.env.*
+!.env.example
+
+# SQL exports and database backups
+*.sql
+*.sql.gz
+*.bak
+*.backup
+*.zip
+
+# Local diagnostic and temporary scripts
+setup-instructor.php
+faculty-applications.php
+make-pwa-icons.php
+test.php
+debug.php
+phpinfo.php
+
+# Logs and caches
+*.log
+cache/
+tmp/
+temp/
+
+# Private upload and backup folders
+backups/
+uploads/
+
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Database exports (keep the public schema only)
+*.sql
+!/database.sql
+*.sql.gz
+*.dump
+*.bak
+
+# Dependencies, caches, and temporary output
+/vendor/
+/node_modules/
+/cache/
+/tmp/
+/coverage/
+
+# Logs and OS/editor files
+*.log
+error_log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
+# Private configuration
+config.php
+config.local.php
+.env
+.env.*
+
+# Database files and backups
+*.sql
+*.sql.gz
+*.bak
+*.backup
+
+# Temporary scripts
+setup-instructor.php
+faculty-applications.php
+make-pwa-icons.php
+test.php
+debug.php
+phpinfo.php
+
+# Logs and local files
+*.log
+.vscode/
+.idea/

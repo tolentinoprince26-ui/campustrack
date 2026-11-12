@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta name="theme-color" content="#10264a">
+
+    <title>Offline | CampusTrack</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: grid;
+            place-items: center;
+
+            padding: 24px;
+
+            background: #f4f7fb;
+            color: #10264a;
+
+            font-family:
+                system-ui,
+                -apple-system,
+                "Segoe UI",
+                sans-serif;
+        }
+
+        .offline-card {
+            width: 100%;
+            max-width: 440px;
+
+            padding: 40px 30px;
+
+            background: white;
+            border: 1px solid #e0e7f0;
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                0 18px 45px rgba(16, 38, 74, 0.07);
+        }
+
+        .offline-logo {
+            display: block;
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 24px;
+            border-radius: 19px;
+        }
+
+        .eyebrow {
+            display: block;
+            color: #5576aa;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 30px;
+            line-height: 1.2;
+            margin: 0 0 14px;
+        }
+
+        p {
+            color: #677994;
+            font-size: 14px;
+            line-height: 1.75;
+
+            margin: 0 0 24px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px 18px;
+
+            border: 0;
+            border-radius: 11px;
+
+            background: #173b70;
+            color: white;
+
+            font: inherit;
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #24589b;
+        }
+
+        small {
+            display: block;
+            margin-top: 22px;
+            color: #8794a7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="offline-card">
+
+        <img
+            src="assets/icons/icon-192.png"
+            alt=""
+            class="offline-logo"
+            width="88"
+            height="88"
+        >
+
+        <span class="eyebrow">
+            CAMPUS TRACK / CONNECTION STATUS
+        </span>
+
+        <h1>You're offline</h1>
+
+        <p>
+            CampusTrack requires an internet connection
+            to sign in, manage classes, and save
+            attendance records.
+
+            Reconnect to the internet and try again.
+        </p>
+
+        <button
+            type="button"
+            onclick="window.location.reload()"
+        >
+            Try again
+        </button>
+
+        <small>
+            CampusTrack · Student Attendance Monitoring System
+        </small>
+
+    </main>
+
+</body>
+</html>

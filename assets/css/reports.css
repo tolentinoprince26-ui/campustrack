@@ -1,0 +1,245 @@
+/* =========================================
+   CAMPUS TRACK — ATTENDANCE REPORTS
+   ========================================= */
+
+.portal-nav-inner {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* REPORT PANELS */
+
+.report-panel {
+    padding: 25px;
+    margin: 0 0 22px;
+    min-width: 0;
+}
+
+.report-panel h2 {
+    font-size: 21px;
+    color: #10264a;
+    margin: 0 0 12px;
+}
+
+.report-panel .subtle {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+/* REPORT FILTERS */
+
+.report-filters {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1.7fr)
+        minmax(140px, 1fr)
+        minmax(140px, 1fr)
+        auto auto;
+
+    align-items: end;
+    gap: 12px;
+}
+
+.report-filters .field {
+    margin: 0;
+    min-width: 0;
+}
+
+.report-filters .button {
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* CSV EXPORT */
+
+.report-export {
+    margin-top: 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.report-export small {
+    color: #687a97;
+    font-size: 12px;
+}
+
+/* REPORT STATISTIC CARDS */
+
+.report-metrics {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 13px;
+    margin: 0 0 22px;
+}
+
+.report-metric {
+    padding: 19px 17px;
+    min-width: 0;
+}
+
+.report-metric span {
+    display: block;
+    color: #6b7a92;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.report-metric strong {
+    font-size: 27px;
+    color: #10264a;
+    overflow-wrap: anywhere;
+}
+
+/* REPORT TABLES */
+
+.report-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.report-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+}
+
+.report-table th,
+.report-table td {
+    padding: 13px 12px;
+
+    border-bottom:
+        1px solid #e4e9f1;
+
+    text-align: left;
+    vertical-align: middle;
+}
+
+.report-table th {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    color: #63748e;
+    white-space: nowrap;
+}
+
+.report-table td strong,
+.report-table td small {
+    display: block;
+}
+
+.report-table td strong {
+    color: #10264a;
+}
+
+.report-table td small {
+    color: #718099;
+    margin-top: 4px;
+}
+
+.report-table td a {
+    color: #2563dc;
+    font-weight: 700;
+}
+
+/* TWO-COLUMN REPORT LAYOUT */
+
+.report-two-col {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+    align-items: start;
+}
+
+/* INFO MESSAGE */
+
+.report-hint {
+    margin: 0 0 22px;
+    padding: 14px 18px;
+
+    background: #eff4fc;
+    border-radius: 12px;
+
+    color: #3c5475;
+    font-size: 13px;
+}
+
+/* ATTENDANCE STATUS LABELS */
+
+.report-status {
+    display: inline-block;
+
+    padding: 6px 10px;
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.report-status-present {
+    background: #e6f6ed;
+    color: #197346;
+}
+
+.report-status-late {
+    background: #fff3dc;
+    color: #9a6306;
+}
+
+.report-status-absent {
+    background: #fde9e8;
+    color: #a62e2a;
+}
+
+.report-status-unknown {
+    background: #e9edf4;
+    color: #4b5a70;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1100px) {
+
+    .report-filters {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .report-metrics {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .report-two-col {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .report-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .report-metrics {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .report-panel {
+        padding: 18px;
+    }
+
+}

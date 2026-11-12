@@ -1,0 +1,138 @@
+/* =======================================
+   CAMPUS TRACK — FACULTY / LOGIN PAGES
+   ======================================= */
+
+/* Login portal tabs */
+
+.login-role-switch {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 20px 0 24px;
+}
+
+.login-role-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 12px 8px;
+    border: 1px solid #dce5f1;
+    border-radius: 10px;
+    color: #314666;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+    background: #ffffff;
+}
+
+.login-role-option:hover,
+.login-role-option:focus-visible {
+    background: #f1f6ff;
+    border-color: #2563eb;
+    text-decoration: none;
+}
+
+.login-role-option.active {
+    background: #eaf1ff;
+    border: 2px solid #2563eb;
+    color: #1d4ed8;
+}
+
+/* Password toggle */
+
+.faculty-password-wrap {
+    position: relative;
+}
+
+.faculty-password-wrap input {
+    width: 100%;
+    padding-right: 82px;
+}
+
+.faculty-password-toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 7px 11px;
+    border: 0;
+    border-radius: 6px;
+    background: #eaf1ff;
+    color: #245fd5;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.faculty-password-toggle:hover {
+    background: #dae7ff;
+}
+
+.faculty-note {
+    margin: 20px 0 0;
+    text-align: center;
+    color: #718099;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Instructor setup */
+
+.faculty-setup-card {
+    width: min(100%, 650px);
+}
+
+.faculty-setup-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.faculty-setup-choice {
+    margin: 16px 0;
+    padding: 14px;
+    background: #f0f4fa;
+    border-radius: 10px;
+}
+
+.faculty-setup-choice label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.faculty-setup-choice label:last-child {
+    margin-bottom: 0;
+}
+
+.faculty-setup-choice input {
+    width: auto;
+}
+
+.faculty-section-caption {
+    font-size: 12px;
+    color: #718099;
+    margin: 4px 0 16px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 560px) {
+
+    .faculty-setup-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .login-role-switch {
+        gap: 7px;
+    }
+
+    .login-role-option {
+        font-size: 11px;
+    }
+
+}

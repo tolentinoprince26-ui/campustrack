@@ -1,0 +1,615 @@
+/* ==========================================
+   CAMPUS TRACK — GLOBAL LIGHT / DARK MODE
+   Works across Student and Instructor pages
+   ========================================== */
+
+/* THEME TOGGLE */
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 13px;
+
+    background: #f1f5fb;
+    color: #173b70;
+
+    border: 1px solid #cbd6e6;
+    border-radius: 9px;
+
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: #e5edf8;
+}
+
+.theme-toggle:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   DARK MODE VARIABLES
+   ========================================== */
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+
+    --ct-dark-bg: #0c1728;
+    --ct-dark-header: #13243d;
+    --ct-dark-panel: #192b44;
+    --ct-dark-input: #101f34;
+
+    --ct-dark-border: #354b69;
+    --ct-dark-text: #e9f1ff;
+    --ct-dark-muted: #aabbd3;
+    --ct-dark-link: #91c4ff;
+}
+
+/* ==========================================
+   PAGE BACKGROUND
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body {
+    background: var(--ct-dark-bg) !important;
+    color: var(--ct-dark-text) !important;
+}
+
+/* ==========================================
+   HEADER AND NAVIGATION
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+:is(.site-header, .portal-nav) {
+    background: var(--ct-dark-header) !important;
+    border-color: var(--ct-dark-border) !important;
+    color: var(--ct-dark-text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+:is(.header-inner, .portal-nav-inner) {
+    border-color: var(--ct-dark-border) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+:is(
+    .brand,
+    .brand strong,
+    .brand small,
+    .header-name,
+    .portal-nav a
+) {
+    color: var(--ct-dark-text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.portal-nav a[aria-current="page"] {
+    color: var(--ct-dark-link) !important;
+    border-color: var(--ct-dark-link) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.role-pill {
+    background: #284666 !important;
+    color: #e9f1ff !important;
+    border-color: #426181 !important;
+}
+
+/* DARK MODE BUTTON */
+
+html[data-theme="dark"] body.dashboard-body
+.theme-toggle {
+    background: #284768 !important;
+    color: #eaf3ff !important;
+    border-color: #557394 !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.theme-toggle:hover {
+    background: #355a82 !important;
+}
+
+/* ==========================================
+   PAGE HEADINGS AND TEXT
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+) {
+    color: var(--ct-dark-text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    p,
+    li,
+    dt,
+    dd,
+    label,
+    small
+) {
+    color: var(--ct-dark-muted) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    strong,
+    b
+) {
+    color: var(--ct-dark-text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+:is(
+    .subtle,
+    .fineprint,
+    .page-footer,
+    .date-badge,
+    .eyebrow.dark
+) {
+    color: var(--ct-dark-muted) !important;
+}
+
+/* ==========================================
+   CARDS AND PANELS
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    .surface,
+    .stat-card,
+    .dashboard-panel,
+    .attendance-panel,
+    .report-panel,
+    .report-metric,
+    .insights-card,
+    .insights-metric,
+    .ct-chart-panel,
+    .class-card,
+    .enrollment-card,
+    .panel,
+    .card
+) {
+    background: var(--ct-dark-panel) !important;
+    border-color: var(--ct-dark-border) !important;
+    color: var(--ct-dark-text) !important;
+    box-shadow: none !important;
+}
+
+/* ==========================================
+   FORMS AND INPUTS
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    input,
+    select,
+    textarea
+) {
+    background: var(--ct-dark-input) !important;
+    color: var(--ct-dark-text) !important;
+    border-color: var(--ct-dark-border) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    input,
+    textarea
+)::placeholder {
+    color: #849ab8 !important;
+    opacity: 1;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    input,
+    select,
+    textarea
+):focus {
+    border-color: #77b5ff !important;
+    outline-color: #77b5ff;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container select option {
+    background: #101f34;
+    color: #e9f1ff;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container input:disabled {
+    background: #273952 !important;
+    color: #9aabc3 !important;
+}
+
+/* CHECKBOXES */
+
+html[data-theme="dark"] body.dashboard-body
+input[type="checkbox"],
+html[data-theme="dark"] body.dashboard-body
+input[type="radio"] {
+    accent-color: #60a5fa;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.button-outline {
+    background: #203a5b !important;
+    color: #e7f1ff !important;
+    border-color: #557394 !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.button-outline:hover {
+    background: #305378 !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.button-primary {
+    background: #2868bd !important;
+    color: #fff !important;
+    border-color: #2868bd !important;
+}
+
+/* ==========================================
+   TABLES — ALL PORTAL PAGES
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container table {
+    background: transparent !important;
+    color: var(--ct-dark-text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container thead,
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container th {
+    background: #213854 !important;
+    color: #b9cce5 !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container tbody,
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container tr,
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container td {
+    background: transparent !important;
+    color: var(--ct-dark-text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(th, td, tr) {
+    border-color: var(--ct-dark-border) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container tbody tr:hover {
+    background: #243d5a !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container td small {
+    color: var(--ct-dark-muted) !important;
+}
+
+/* ==========================================
+   LINKS
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container a:not(.button) {
+    color: var(--ct-dark-link) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container a:not(.button):hover {
+    color: #c3e0ff !important;
+}
+
+/* ==========================================
+   DASHBOARD DETAILS AND STATISTICS
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+:is(
+    .stat-card strong,
+    .stat-card p,
+    .stat-card small,
+    .report-metric strong,
+    .attendance-stats strong,
+    .insights-metric strong,
+    .ct-insight-stats strong
+) {
+    color: var(--ct-dark-text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+:is(
+    .task-list > div,
+    .details > div,
+    .info-note,
+    .report-hint
+) {
+    border-color: var(--ct-dark-border) !important;
+    color: var(--ct-dark-text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+:is(
+    .info-note,
+    .report-hint
+) {
+    background: #243d5c !important;
+}
+
+/* ==========================================
+   PROGRESS BAR
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.progress-track {
+    background: #354963 !important;
+}
+
+/* ==========================================
+   ATTENDANCE STATUS COLORS
+   Keep Present / Late / Absent distinguishable
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.report-status-present {
+    background: #153f34 !important;
+    color: #8ff0bd !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.report-status-late {
+    background: #493919 !important;
+    color: #f8d38a !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.report-status-absent {
+    background: #4a2830 !important;
+    color: #ffa2ae !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.status-pill.good {
+    background: #153f34 !important;
+    color: #8ff0bd !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.status-pill.warning {
+    background: #493919 !important;
+    color: #f8d38a !important;
+}
+
+/* ==========================================
+   ALERTS AND NOTICES
+   ========================================== */
+
+html[data-theme="dark"] body.dashboard-body
+.notice {
+    border-color: var(--ct-dark-border);
+}
+
+html[data-theme="dark"] body.dashboard-body
+.notice-error {
+    background: #472630 !important;
+    color: #ffd2d7 !important;
+    border-color: #8c4754 !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.notice-success {
+    background: #153f34 !important;
+    color: #a8f0c9 !important;
+    border-color: #357c5b !important;
+}
+
+/* ==========================================
+   SCROLLBARS
+   ========================================== */
+
+html[data-theme="dark"] {
+    scrollbar-color: #486384 #101d30;
+}
+
+html[data-theme="dark"] body.dashboard-body
+:is(
+    .attendance-table-wrap,
+    .report-table-wrap,
+    .portal-nav-inner
+) {
+    scrollbar-color: #486384 #172942;
+}
+
+/* ==========================================
+   MOBILE HEADER
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    .header-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .theme-toggle {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+}
+
+/* ==========================================
+   CAMPUS TRACK — DARK MODE READABILITY FIX
+   ========================================== */
+
+/* BRIGHTER MAIN TEXT */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container {
+    color: #F0F6FF !important;
+}
+
+/* BETTER CONTRAST FOR DESCRIPTIONS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    .subtle,
+    .fineprint,
+    .page-footer,
+    p,
+    label,
+    dt,
+    dd
+) {
+    color: #D3E1F5 !important;
+}
+
+/* STRONGER HEADINGS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container :is(
+    h1,
+    h2,
+    h3,
+    h4
+) {
+    color: #FFFFFF !important;
+}
+
+/* SMALL TEXT AND LABELS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container small {
+    color: #CFDDF0 !important;
+}
+
+/* SECTION LABELS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .eyebrow,
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .eyebrow.dark {
+    color: #A9CBFF !important;
+}
+
+/* FIX DATE BADGE */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .date-badge {
+    background: #294364 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #496587 !important;
+}
+
+/* FIX AVAILABLE BADGES */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .task-list small {
+    background: #294364 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #496587 !important;
+}
+
+/* INSTRUCTOR TASK LIST */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .task-list span,
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .task-list b {
+    color: #F0F6FF !important;
+}
+
+/* STATISTIC LABELS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .stat-card p,
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .stat-card small {
+    color: #D9E6F8 !important;
+}
+
+/* STATISTIC ICONS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .stat-symbol {
+    background: #345782 !important;
+    color: #FFFFFF !important;
+}
+
+/* INSIGHT CARDS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .ct-insight-stats small {
+    color: #D7E5F7 !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .ct-insight-stats strong {
+    color: #FFFFFF !important;
+}
+
+/* CHART TITLES AND DESCRIPTIONS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .ct-insights h2,
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .ct-chart-panel h3 {
+    color: #FFFFFF !important;
+}
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container #ct-insight-note,
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .ct-insights p {
+    color: #D3E1F5 !important;
+}
+
+/* SYSTEM INFORMATION BOX */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container .info-note {
+    background: #294362 !important;
+    color: #F0F6FF !important;
+}
+
+/* OUTLINE BUTTON TEXT */
+
+html[data-theme="dark"] body.dashboard-body
+.button-outline {
+    color: #FFFFFF !important;
+}
+
+/* LINKS */
+
+html[data-theme="dark"] body.dashboard-body
+.dashboard-container a:not(.button) {
+    color: #A9D2FF !important;
+}

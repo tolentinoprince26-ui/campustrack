@@ -1,0 +1,201 @@
+/* ========================================
+   CAMPUS TRACK — PORTAL NAVIGATION
+   ======================================== */
+
+.portal-nav {
+    border-top: 1px solid var(--border);
+    background: #fff;
+}
+
+.portal-nav-inner {
+    max-width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    padding: 0 25px;
+}
+
+.portal-nav a {
+    display: inline-block;
+    padding: 13px 4px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 750;
+    border-bottom: 3px solid transparent;
+}
+
+.portal-nav a:hover,
+.portal-nav a[aria-current="page"] {
+    color: var(--blue);
+    border-bottom-color: var(--blue);
+    text-decoration: none;
+}
+
+/* ========================================
+   CLASS MANAGEMENT LAYOUT
+   ======================================== */
+
+.classes-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(300px, 0.8fr)
+        minmax(0, 1.5fr);
+    gap: 22px;
+    align-items: start;
+}
+
+.classes-panel {
+    padding: 28px;
+    min-width: 0;
+}
+
+.classes-panel h2 {
+    margin: 9px 0;
+    font-size: 25px;
+}
+
+.classes-panel > .subtle {
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.classes-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.form-cancel {
+    margin-top: 10px;
+}
+
+/* ========================================
+   CLASS RECORDS TABLE
+   ======================================== */
+
+.classes-table-wrap {
+    overflow-x: auto;
+}
+
+.classes-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.classes-table th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: .04em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 10px;
+    white-space: nowrap;
+}
+
+.classes-table td {
+    padding: 16px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.classes-table td strong {
+    color: var(--navy);
+}
+
+.table-detail {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* ========================================
+   CLASS ACTIONS
+   ======================================== */
+
+.class-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.class-actions form {
+    margin: 0;
+}
+
+.class-action-link,
+.class-delete {
+    font: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--blue);
+}
+
+.class-delete {
+    color: #b42342;
+}
+
+.class-delete:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   EMPTY STATE
+   ======================================== */
+
+.classes-empty {
+    padding: 55px 18px;
+    text-align: center;
+    background: var(--background);
+    border-radius: 12px;
+}
+
+.classes-empty strong {
+    color: var(--navy);
+}
+
+.classes-empty p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 7px 0 0;
+}
+
+.notice p {
+    margin: 0 0 5px;
+}
+
+.notice p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE LAYOUT
+   ======================================== */
+
+@media (max-width: 1000px) {
+    .classes-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .classes-panel {
+        padding: 20px;
+    }
+
+    .classes-form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .portal-nav-inner {
+        padding: 0 15px;
+    }
+}
+
+@import url("theme.css");

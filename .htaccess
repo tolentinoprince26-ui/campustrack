@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+
+<FilesMatch "^(config(\.example)?\.php|database\.sql|README\.md)$">
+Require all denied
+</FilesMatch>
+
+# A second defense: the one-time bootstrap must never be public.
+
+<Files "setup-instructor.php">
+Require local
+</Files>
